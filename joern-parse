@@ -2,4 +2,5 @@
 
 BASEDIR=$(dirname "$0")
 
-java -cp "$BASEDIR/projects/extensions/joern-fuzzyc/build/libs/joern-fuzzyc.jar:$BASEDIR/projects/extensions/jpanlib/build/libs/jpanlib.jar:$BASEDIR/projects/octopus/lib/*" tools.parser.ParserMain -outformat csv -outdir parsed $@
+java -cp "$BASEDIR/projects/extensions/joern-fuzzyc/build/libs/joern-fuzzyc.jar:$BASEDIR/projects/extensions/joern-fuzzyc/lib/*:$BASEDIR/projects/extensions/jpanlib/build/libs/jpanlib.jar:$BASEDIR/projects/octopus/lib/*" tools.parser.ParserMain $@
+#  "-outformat csv -outdir parsed"

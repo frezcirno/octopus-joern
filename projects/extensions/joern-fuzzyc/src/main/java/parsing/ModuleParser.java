@@ -1,19 +1,24 @@
 package parsing;
 
 import java.util.Observer;
+import me.tongfei.progressbar.*;
 
 public class ModuleParser
 {
 	ANTLRParserDriver parserDriver;
+	ProgressBar pb;
 
 	public ModuleParser(ANTLRParserDriver driver)
 	{
 		parserDriver = driver;
+
+		pb = new ProgressBar("Parsing", 1);
 	}
 
 	public void parseFile(String filename)
 	{
-		System.out.println(filename);
+		// System.out.println(filename);
+		pb.step(); // step by 1
 
 		try
 		{
